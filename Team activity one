@@ -23,4 +23,4 @@ def montePi(n):
     plt.title('Monte Carlo Estimate of Pi')
     plt.show()
     print(x,y)
-montePi(10)
+
