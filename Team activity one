@@ -4,8 +4,6 @@ import numpy as np
 import random
 import matplotlib.pyplot as plt
 def montePi(n):
-    plt.figure(1)
-    plt.subplot(111)
     plt.axis([-1,1,-1,1])
     
     inCircle = 0
