@@ -4,6 +4,8 @@ import numpy as np
 import random
 import matplotlib.pyplot as plt
 def montePi(n):
+    plt.figure(1)
+    plt.subplot(111)
     plt.axis([-1,1,-1,1])
     
     inCircle = 0
@@ -14,11 +16,11 @@ def montePi(n):
     
         if d <= 1:
             inCircle = inCircle + 1
-            plt.plot([x], [y],"b--")
+            plt.scatter(x, y, s = inCircle, c = 'blue')
                 #plt.color('Blue')
         else:
-            plt.plot([x], [y], 'r--')
+            plt.scatter(x, y, c = 'red')
     plt.title('Monte Carlo Estimate of Pi')
     plt.show()
     print(x,y)
-
+montePi(1000)
