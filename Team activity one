@@ -4,9 +4,8 @@ import numpy as np
 import random
 import matplotlib.pyplot as plt
 def montePi(n):
-    plt.figure(1)
-    plt.subplot(111)
-    plt.axis([-1,1,-1,1])
+    
+    plt.axis([-2,2,-2,2])
     
     inCircle = 0
     for i in range(n):
@@ -17,10 +16,13 @@ def montePi(n):
         if d <= 1:
             inCircle = inCircle + 1
             plt.scatter(x, y, s = inCircle, c = 'blue')
-                #plt.color('Blue')
+                #colors the inside darts blue
         else:
             plt.scatter(x, y, c = 'red')
+            #colors the outside darts red
     plt.title('Monte Carlo Estimate of Pi')
     plt.show()
     print(x,y)
 montePi(1000)
+# This returns a quarter circle
+
