@@ -38,3 +38,41 @@ def montePi(numDarts):
     pi = inCircle/numDarts * 4
 
     return pi
+    ##This code will return pi and create a plot, but won't plot the points for some reason.
+    
+    
+    
+    
+    
+
+import math
+import numpy as np
+import random
+import matplotlib.pyplot as plt
+def montePi(n):
+    
+    plt.axis([0,1,0,1])
+    
+    inCircle = 0
+    for i in range(n):
+        x = random.random()
+        y = random.random()
+        d = math.sqrt(x**2 + y**2)
+    
+        if d <= 1:
+            inCircle = inCircle + 1
+            plt.scatter(x, y, c = 'blue')
+                #colors the inside darts blue
+                # and scatters the numDarts on the graph 
+        else:
+            plt.scatter(x, y, c = 'red')
+            #colors the outside darts red
+            
+    plt.title('Monte Carlo Estimate of Pi')
+    plt.show()
+    
+    pi = inCircle/n * 4
+    return pi
+
+montePi(1000)
+##I changed the axis of Eduige's code and made it return pi
