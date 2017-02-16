@@ -15,8 +15,9 @@ def montePi(n):
     
         if d <= 1:
             inCircle = inCircle + 1
-            plt.scatter(x, y, s = inCircle, c = 'blue')
+            plt.scatter(x, y, c = 'blue')
                 #colors the inside darts blue
+                # and scatters the numDarts on the graph 
         else:
             plt.scatter(x, y, c = 'red')
             #colors the outside darts red
